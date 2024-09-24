@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --accent: #89CFF0;
+    --pink: #F4C2C2;
+    --black: #131313;
+    --gray: #f9f9f9;
+    --mustard: #FFCE1B;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+section {
+    min-width: 100%;
+    min-height: 100vh;
+    color: var(--black);
+}
+
+/* Navbar */
+nav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    background-color: white;
+    padding: 30px 50px;
+    transition: all 0.1s ease-out;
+    filter: drop-shadow(5px 5px 10px transparent);
+}
+
+/* Navbar Sticky */
+nav.sticky {
+    background-color: white;
+    filter: drop-shadow(5px 5px 10px rgba(194, 184, 255, 0.5));
+}
+
+/* Navbar Brand */
+.brand {
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+    color: var(--pink);
+}
+
+.brand h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.brand:hover {
+    opacity: 0.8;
+}
+
+/* Navbar Menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+}
+
+.menu a {
+    display: inline-block;
+    position: relative;
+    color: var(--pink);
+    text-decoration: wavy;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.menu a::after {
+    color: var(--accent);
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    background: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.btn {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Home Page Section */
+.home-page {
+    margin-top: 200px;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.home-headlines {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 750px;
+}
+
+.home-headlines h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.home-headlines p {
+    font-size: 20px;
+    text-align:justify;
+}
+
+.btn-home {
+    width: 276px;
+    height: 62px;
+    font-size: 24px;
+    padding-top: 15px;
+}
+
+.home-page-img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* PDF Section Styling */
+.pdfSection h1 {
+    font-size: 48px;
+    color: var(--black);
+}
+
+.pdfSection h4 {
+    font-size: 28px;
+    color: var(--mustard);
+    padding-bottom: 20px;
+}
+
+.pdfSection p {
+    color: var(--black);
+}
+
+#pdfSection {
+    padding-top: 200px;
+    text-align: center;
+    margin: 70px 0;
+    overflow: hidden;
+}
+
+#pdfSection embed {
+    border: transparent;
+    border-radius: 10px;
+}
+
+#pdfSection a {
+    color: var(--pink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#pdfSection a:hover {
+    text-decoration:solid;
+}
+
+/* Memories Section */
+.memories {
+    padding-top: 200px;
+    overflow: hidden;
+}
+
+
+.memories h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo {
+    margin: 50px;
+    text-align: center;
+}
+
+.photo img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.photo-note {
+    border-radius: 32px;
+    display: flex;
+    width: 350px;
+    padding: 40px 30px;
+    text-align: justify;
+    transition: all 0.3s ease-out;
+}
+
+
+.photo-note p {
+    font-size: 15px;
+}
+
+.location {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0.8;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.location i {
+    font-size: 20px;
+}
+
+.location h6 {
+    font-size: 20px;
+}
+
+#proposal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 200px;
+    gap: 10px;
+}
+
+#proposal h5 {
+    color: var(--accent);
+    font-weight: bolder;
+    padding-top: 15px;
+}
+
+.proposalPara {
+    padding-top:50px;
+    padding-bottom: 50px;
+
+}
+
+#proposalText {
+    padding: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c2185b;
+}
+
+.mapSection {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#map{
+    padding-top: 50px;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:50px;
+    padding-bottom: 200px;
+}
+
+/* Footer Section */
+#footerSection {
+    background-color: var(--accent);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 3px solid transparent;
+    box-shadow: 0 -4px 8px rgba(40, 30, 30, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.footer-content iframe {
+    max-width: min-content;
+    height: 350px;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Copyright text */
+.footer-copyright {
+    font-size: 14px;
+    color: var(--pink);
+    margin-top: 20px;
+}
+
+/* Laptop and Tablet */
+@media (max-width: 1024px) and (min-width:0px) {
+    nav {
+        padding: 30px 20px;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+    .menu {
+        gap: 28px;
+    }
+
+    .menu a {
+        font-size: 20px;
+    }
+
+    nav .btn-2 {
+        width: 118px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .home-page {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-headlines {
+        align-items: center;
+        gap: 11px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+
+        /* Navbar */
+        nav {
+            padding: 20px 30px;
+            width: 100%;
+        }
+
+        nav .btn {
+            display: block;
+            color: var(--black);
+            font-size: 24px;
+        }
+
+        nav .menu {
+            position: fixed;
+            background: var(--accent);
+            flex-direction: column;
+            min-width: 80%;
+            height: 100vh;
+            top: 0;
+            right: 100%;
+            padding: 50px;
+            transition: 0.5s;
+            transition-property: right;
+        }
+
+        nav .menu.active {
+            right: 0;
+        }
+
+        nav .menu .close-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 25px;
+            color: white;
+        }
+
+        nav .menu a {
+            display: block;
+            font-size: 20px;
+            margin: 20px;
+            padding: 0 15px;
+            color: white;
+        }
+
+        /* Home Page */
+        .home-page {
+            padding: 0px 20px;
+            margin-top: 120px;
+        }
+
+        .home-headlines {
+            width: 100%;
+        }
+
+        .home-headlines h1 {
+            font-size: 20px;
+        }
+
+        .home-headlines p {
+            font-size: 12px;
+        }
+
+        .memories{
+            padding-top: 0px 20px;
+            margin-top: 120px;
+        }
+        .memories h1{
+            font-size: 20px;
+        }
+        .photo-note p {
+            font-size: 12px;
+        }
+        .location i {
+            font-size: 10px;
+        }
+        .location h6 {
+            font-size: 10px;
+        }
+        .pdfSection h1 {
+            font-size: 20px;
+        }
+        .pdfSection h4 {
+            font-size: 15px;
+        }
+        .pdfSection embed {
+            width: 300px;
+            height: 600px;
+            padding: 2px;
+            padding-top: 20px;
+            }
+        #proposal{
+            padding-top: 0px 20px;
+            margin-top: 120px;
+        }
+        #proposalHeading {
+            font-size: 15px;
+            text-align: center;
+        }
+        #proposalPara {
+            font-size: 12px;
+            text-align: center;
+        }
+        .mapSection h2{
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #map iframe{
+            max-width: min-content;
+            padding: 2px;
+            padding-top: 20px;
+        }
+        .countdown h2 {
+            font-size: 15px;
+        }
+
+        .footer-content iframe {
+            max-width: min-content;
+            max-height: min-content;
+        }
+
+}
